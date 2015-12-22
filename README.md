@@ -1,6 +1,3 @@
+A collection of Node.js projects.
 
-A project that uses node.js to write a server that offers up
-some string operations.
-
-Provides a javascript based node client and a python based client to
-mess around and see how easy it is to interact with Node servers.
+* stringops - A silly program for taking my first steps. Sets up a node server to do string reversal, pig latin, and word counts. Has two clients, one written in node and one written in python. 
