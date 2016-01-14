@@ -16,6 +16,12 @@ const
                     resp: rev
                 }));
             }
+            if(message.type="piglatin") {
+                let pl = stringops.piglatin(message.string);
+                connection.write(JSON.stringify({
+                    resp: pl
+                }));
+            }
         });
     });
 

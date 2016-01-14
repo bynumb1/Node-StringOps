@@ -2,8 +2,8 @@
 
 exports.reverse = function(reversal) {
     console.log(reversal);
-    var len=reversal.length-1;
-    var ret="";
+    var len=reversal.length-1,
+        ret="";
     for(;len >=0; len--) {
         ret+=reversal[len];
     }
@@ -11,14 +11,12 @@ exports.reverse = function(reversal) {
 }
 
 exports.piglatin = function (translate) {
-        var len=translate.length;
-        var sub;
-        var last;
-        if(translate[0]==='a' 
-                || translate[0]==='e'
-                || translate[0]==='i'
-                || translate[0]==='o'
-                || translate[0]==='u') {
+        var len=translate.length,
+            first=translate[0],
+            vowels=['a', 'e', 'i', 'o', 'u'],
+            sub,
+            last;
+        if(inArray(first, vowels)) {
                     sub=translate+'ay';
                     console.log(sub)
                     return sub;
@@ -28,4 +26,8 @@ exports.piglatin = function (translate) {
            last = exports.piglatin(sub);
            return last;
         }
+}
+
+function inArray(search, array) {
+    return array.indexOf(search) > -1;
 }
